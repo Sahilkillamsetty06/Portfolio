@@ -1,16 +1,17 @@
 
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("nav ul li a");
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-        });
-    });
+
+
+document.querySelector('.menu-toggle').addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.toggle('show');
 });
 
+
+const navLinks = document.querySelectorAll('.nav-links a');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('show');
+    });
+});
 
 function openModal(id) {
     document.getElementById(id).style.display = 'flex';
@@ -20,17 +21,6 @@ function closeModal(id) {
     document.getElementById(id).style.display = 'none';
 }
 
-
-// // Dynamic greeting based on the time of day
-// window.onload = () => {
-//     const hours = new Date().getHours();
-//     let greeting = "Welcome";
-//     if (hours < 12) greeting = "Good Morning";
-//     else if (hours < 18) greeting = "Good Afternoon";
-//     else greeting = "Good Evening";
-
-//     alert(`${greeting}! Explore my portfolio.`);
-// };
 
 function toggleAccordion(header) {
     const content = header.nextElementSibling;
@@ -64,18 +54,6 @@ window.addEventListener("scroll", () => {
     });
 });
 
-const themeToggle = document.getElementById("theme-toggle");
-themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-    document.body.classList.toggle("light");
-});
-function openModal(id) {
-    document.getElementById(id).style.display = "flex";
-}
-
-function closeModal(id) {
-    document.getElementById(id).style.display = "none";
-}
 const sectionsToAnimate = document.querySelectorAll("section");
 
 const observer = new IntersectionObserver(

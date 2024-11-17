@@ -11,6 +11,7 @@
 <body>
     <header>
         <div class="container">
+            
             <h1>Sahil Killamsetty</h1>
             <p>
                 <a href="mailto:killamsettysahil@gmail.com" target="_blank">
@@ -25,11 +26,15 @@
                 <a href="tel:+917901452332" target="_blank">
                     <i class="fas fa-phone"></i> +91 7901452332
                 </a>
+
             </p>
             
         </div>
         <nav>
-            <ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#experience">Experience</a></li>
@@ -38,7 +43,8 @@
                 <li><a href="#achievements">Achievements</a></li>
             </ul>
         </nav>
-        <button id="theme-toggle">Toggle Dark Mode</button>
+        
+       
     </header>
    
 
@@ -65,7 +71,7 @@
             <div class="accordion-item">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
                     <strong>Dassault Systemes (Jan 2024 - June 2024)</strong> 
-                    <span class="arrow">&#9660;</span> <!-- Down Arrow -->
+                    <span class="arrow">&#9660;</span> 
                 </div>
                 <div class="accordion-content" style="display: none;">
                     <p><strong>Project:</strong> Optimizing Packaging for 3DXML using Machine Learning</p>
@@ -122,7 +128,7 @@
             </div>
         </div>
     
-        <!-- Modal 1: Fine-Tuned GPT-2 -->
+       
         <div id="project1" class="modal">
             <div class="modal-content">
                 <button class="close" onclick="closeModal('project1')">&times;</button>
@@ -137,7 +143,6 @@
             </div>
         </div>
     
-        <!-- Modal 2: Urban Sound Classification -->
         <div id="project2" class="modal">
             <div class="modal-content">
                 <button class="close" onclick="closeModal('project2')">&times;</button>
@@ -152,7 +157,7 @@
             </div>
         </div>
     
-        <!-- Modal 3: Xpens Project -->
+        
         <div id="project3" class="modal">
             <div class="modal-content">
                 <button class="close" onclick="closeModal('project3')">&times;</button>
