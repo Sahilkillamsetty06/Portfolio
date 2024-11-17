@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahil Killamsetty - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Sahil Killamsetty</h1>
+            <p>
+                <a href="mailto:killamsettysahil@gmail.com" target="_blank">
+                    <i class="fas fa-envelope"></i> Email
+                </a> |
+                <a href="https://github.com/Sahilkillamsetty06" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a> |
+                <a href="https://www.linkedin.com/in/sahil-killamsetty-ba6014243" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="tel:+917901452332" target="_blank">
+                    <i class="fas fa-phone"></i> +91 7901452332
+                </a>
+            </p>
+            
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle">Toggle Dark Mode</button>
+    </header>
+   
+
+    <section id="photo">
+        <h2><i class="fas fa-user-circle"></i> About Me</h2>
+        <div class="photo-container">
+            <img src="photo.jpg" alt="Sahil Killamsetty" class="profile-photo">
+            <p>
+                Hi, I’m Sahil Killamsetty, a Computer Science graduate from Maulana Azad National Institute of Technology, Bhopal. With a passion for technology, I specialize in software development, machine learning, and web development. I have hands-on experience working with technologies like Python, JavaScript, React, MongoDB, and Node.js, along with a solid understanding of data structures, algorithms, and object-oriented programming.
+            </p>
+            <p>
+                During my internship at Dassault Systèmes, I worked on optimizing packaging for 3DXML using machine learning, gaining expertise in developing predictive models and automation pipelines. I am also deeply passionate about competitive coding and problem-solving, having solved over 300 coding challenges across various platforms.
+            </p>
+            <p>
+                In my free time, I love exploring AI, building personal projects, and continuously honing my technical skills to stay ahead of the curve. I'm always looking for new opportunities to grow, collaborate, and contribute to impactful projects. Feel free to explore my work and reach out if you'd like to collaborate!
+            </p>
+        </div>
+        
+    </section>
+
+    <section id="experience">
+        <h2><i class="fas fa-briefcase"></i> Internship Experience</h2>
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <strong>Dassault Systemes (Jan 2024 - June 2024)</strong> 
+                    <span class="arrow">&#9660;</span> <!-- Down Arrow -->
+                </div>
+                <div class="accordion-content" style="display: none;">
+                    <p><strong>Project:</strong> Optimizing Packaging for 3DXML using Machine Learning</p>
+                    <p>Developed a predictive analytics model using machine learning techniques on process data for better packaging.</p>
+                    <p><strong>Tools & Technologies Used:</strong> Jupyter Notebook, Python, pandas, scikit-learn, GridSearchCV, RandomForestRegressor, joblib.</p>
+                    <ul>
+                        <li>Developed scripts to transform raw JSON data into a suitable CSV format, handling missing values, duplicates, and feature scaling.</li>
+                        <li>Utilized <strong>RandomForestRegressor</strong> with <strong>GridSearchCV</strong> for hyperparameter tuning, saving the trained model and scaler for future predictions.</li>
+                        <li>Developed an automated evaluation pipeline for data preprocessing, prediction, and custom rounding using Python.</li>
+                        <li>Enhanced packaging efficiency and reduced processing time by applying optimized workflows and feature engineering.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="education">
+        <h2><i class="fas fa-book"></i> Education</h2>
+        <div class="education-card">
+            <h3>Maulana Azad National Institute of Technology Bhopal</h3>
+            <p><strong>B.Tech in Computer Science and Engineering (2020-2024)</strong></p>
+            <p>CGPA: 7.55</p>
+        </div>
+        <div class="education-card">
+            <h3>FIITJEE Junior College</h3>
+            <p><strong>Board of Intermediate Education, Andhra Pradesh (2018-2020)</strong></p>
+            <p>CGPA: 8.63</p>
+        </div>
+        <div class="education-card">
+            <h3>Dr.KKR’s Gowtham School</h3>
+            <p><strong>Board of Secondary Education, Andhra Pradesh (2017-2018)</strong></p>
+            <p>CGPA: 10</p>
+        </div>
+    </section>
+    
+    
+    <section id="projects">
+        <h2><i class="fas fa-folder-open"></i> Projects</h2>
+        <div class="project-cards">
+            <div class="card" onclick="openModal('project1')">
+                <h3>Fine-Tuned GPT-2</h3>
+                <p>(Jan 2023 - March 2023)</p>
+                <p>Text Generation with Hugging Face Transformers.</p>
+            </div>
+            <div class="card" onclick="openModal('project2')">
+                <h3>Urban Sound Classification</h3>
+                <p>(Aug 2022 - Dec 2022)</p>
+                <p>Machine learning classification for urban sounds.</p>
+            </div>
+            <div class="card" onclick="openModal('project3')">
+                <h3>Xpens: Personal Finance Management Application</h3>
+                <p>(Feb 2024 - Aug 2024)</p>
+                <p>A web application to track expenses, manage budgets, and synchronize loan data efficiently.</p>
+            </div>
+        </div>
+    
+        <!-- Modal 1: Fine-Tuned GPT-2 -->
+        <div id="project1" class="modal">
+            <div class="modal-content">
+                <button class="close" onclick="closeModal('project1')">&times;</button>
+                <h2>Fine-Tuned GPT-2</h2>
+                <ul>
+                    <p><b>Tools:</b> Python, Hugging Face Transformers, TensorFlow</p>
+                    <p>Fine-tuned a GPT-2 model to complete the sentence given as a prompt.</p>
+                    <li>GPT-2 is imported from Hugging Face Transformers and fine-tuned on a small dataset.</li>
+                    <li>Completes the sentence of a given length according to the provided prompt.</li>
+                    <li>Helped in gaining deep insight into the working of Transformer models.</li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Modal 2: Urban Sound Classification -->
+        <div id="project2" class="modal">
+            <div class="modal-content">
+                <button class="close" onclick="closeModal('project2')">&times;</button>
+                <h2>Urban Sound Classification</h2>
+                <ul>
+                    <p><b>Tools:</b> Python, Machine Learning, Kaggle</p>
+                    <p>It detects urban traffic sounds and other sounds generally found in cities, classifying them into the correct category.</p>
+                    <li>Used the UrbanSound8k dataset and extracted features using MFCC (Mel Frequency Cepstral Coefficient).</li>
+                    <li>Reduced dimensionality using eigenvectors and eigenvalues (PCA - Principal Component Analysis).</li>
+                    <li>Classified sounds using <strong>KNN</strong>  and <strong>Random Forest</strong> techniques observed from the confusion matrix that Random Forest performed better.</li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Modal 3: Xpens Project -->
+        <div id="project3" class="modal">
+            <div class="modal-content">
+                <button class="close" onclick="closeModal('project3')">&times;</button>
+                <h2>Xpens: Personal Finance Management Application</h2>
+                <ul>
+                    <p><b>Tools:</b> React, Node.js, MongoDB</p>
+                    <p>A web application to track expenses, manage budgets, and synchronize loan data efficiently.</p>
+                    <li>Implemented features to create categories, set budgets, and automate resets at the start of each month.</li>
+                    <li>Integrated a loan management system to synchronize loan data across accounts.</li>
+                    <li>Enhanced user experience with a responsive UI built using React.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+ 
+
+    <section id="skills">
+    <h2><i class="fas fa-laptop-code"></i> Technical Skills</h2>
+    <div class="skills-container">
+        <div class="skill-card">
+            <i class="fas fa-code"></i>
+            <h3>C & C++</h3>
+        </div>
+        <div class="skill-card">
+            <i class="fab fa-python"></i>
+            <h3>Python</h3>
+        </div>
+        <div class="skill-card">
+            <i class="fab fa-html5"></i>
+            <h3>HTML</h3>
+        </div>
+        <div class="skill-card">
+            <i class="fab fa-css3-alt"></i>
+            <h3>CSS</h3>
+        </div>
+        <div class="skill-card">
+            <i class="fab fa-js"></i>
+            <h3>JavaScript</h3>
+        </div>
+        <div class="skill-card">
+            <i class="fab fa-react"></i>
+            <h3>React</h3>
+        </div>
+        <div class="skill-card">
+            <i class="fas fa-database"></i>
+            <h3>MongoDB</h3>
+        </div>
+        <div class="skill-card">
+            <i class="fab fa-node-js"></i>
+            <h3>Node.js</h3>
+        </div>
+        
+        
+        <div class="skill-card">
+            <i class="fas fa-tools"></i>
+            <h3>Git & GitHub</h3>
+        </div>
+        <div class="skill-card">
+            <i class="fas fa-brain"></i>
+            <h3>Machine Learning</h3>
+        </div>
+        <div class="skill-card">
+            <i class="fas fa-robot"></i>
+            <h3>Artificial Intelligence</h3>
+        </div>
+    </div>
+</section>
+
+
+    <section id="achievements">
+        <h2><i class="fas fa-trophy"></i> Achievements</h2>
+        <ul>
+            <li>Solved over 300 competitive coding and DSA problems.</li>
+            <li>Scored 99.378 percentile in JEE Mains (All India Rank: 7030).</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Designed with ❤️ by Sahil Killamsetty</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
